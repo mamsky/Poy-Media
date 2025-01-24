@@ -1,3 +1,14 @@
+import { Avatar } from "@/components/ui/avatar";
+import {
+  DialogBody,
+  DialogCloseTrigger,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogRoot,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { FileUploadRoot, FileUploadTrigger } from "@/components/ui/file-upload";
 import {
   Box,
   Button,
@@ -6,16 +17,15 @@ import {
   HStack,
   Image,
   Stack,
+  Text,
+  Textarea,
 } from "@chakra-ui/react";
-import { CiHome } from "react-icons/ci";
+import { CiHome, CiImageOn, CiLogout } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
 import { LuUserSearch } from "react-icons/lu";
 import { RiAccountCircleLine } from "react-icons/ri";
-import { FaHeart } from "react-icons/fa";
-import { CiLogout } from "react-icons/ci";
-import BgCat from "../assets/bg-cat.png";
-import { Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { Avatar } from "@/components/ui/avatar";
+import BgCat from "../assets/bg-cat.png";
 
 const Dashboard = () => {
   return (
@@ -66,6 +76,39 @@ const Dashboard = () => {
             Account
           </Text>
         </Box>
+
+        <DialogRoot>
+          <DialogTrigger asChild>
+            <Button variant="outline" w="100%" borderRadius="15px" bg="green">
+              Open Dialog
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader></DialogHeader>
+            <DialogBody>
+              <Box display="flex" gap="2">
+                <Avatar name="Paste Prosmana" src="" />
+                <Textarea border="none" placeholder="What is happening?" />
+              </Box>
+            </DialogBody>
+            <DialogFooter>
+              {/* file Upload */}
+              <FileUploadRoot>
+                <FileUploadTrigger asChild>
+                  <Button variant="outline" size="sm">
+                    <CiImageOn />
+                  </Button>
+                </FileUploadTrigger>
+              </FileUploadRoot>
+
+              <Button bg="green" borderRadius="15px">
+                Post
+              </Button>
+            </DialogFooter>
+            <DialogCloseTrigger />
+          </DialogContent>
+        </DialogRoot>
+
         <Box float="bottom">
           <Text
             textStyle="2xl"
@@ -138,7 +181,10 @@ const Dashboard = () => {
           <Box display="flex" justifyContent="space-between" my="10px">
             <Stack gap="8">
               <HStack gap="4">
-                <Avatar size="sm" src={BgCat} />
+                <Avatar
+                  size="sm"
+                  src="https://i.pinimg.com/564x/c1/e3/4f/c1e34fc1445081af3d5858209081bb02.jpg"
+                />
                 <Stack gap="0">
                   <Text fontStyle="sm">Papoy Gaming</Text>
                   <Text color="fg.muted" textStyle="sm">
@@ -155,7 +201,10 @@ const Dashboard = () => {
           <Box display="flex" justifyContent="space-between" my="10px">
             <Stack gap="8">
               <HStack gap="4">
-                <Avatar size="sm" src={BgCat} />
+                <Avatar
+                  size="sm"
+                  src="https://i.pinimg.com/736x/01/9d/b8/019db80e90c37f4d57bc22a97c5ca09f.jpg"
+                />
                 <Stack gap="0">
                   <Text fontStyle="sm">Papoy</Text>
                   <Text color="fg.muted" textStyle="sm">
@@ -172,7 +221,10 @@ const Dashboard = () => {
           <Box display="flex" justifyContent="space-between" my="10px">
             <Stack gap="8">
               <HStack gap="4">
-                <Avatar size="sm" src={BgCat} />
+                <Avatar
+                  size="sm"
+                  src="https://thumb.viva.id/vivagadget/665x374/2024/08/02/66ad0ef1294fc-7-karakter-cewek-anime-yang-disukai-wibu_.jpg"
+                />
                 <Stack gap="0">
                   <Text fontStyle="sm">Papoy Gaming</Text>
                   <Text color="fg.muted" textStyle="sm">
@@ -185,6 +237,10 @@ const Dashboard = () => {
               Follow
             </Button>
           </Box>
+        </Box>
+
+        <Box bg="white/20" p="2" borderRadius="10px">
+          <Text>Developed by Paste Prosmana .</Text>
         </Box>
       </GridItem>
     </Grid>
