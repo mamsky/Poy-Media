@@ -1,8 +1,7 @@
-import { Box, Button, Container, Flex, Input, Text } from "@chakra-ui/react";
 import { PasswordInput } from "@/components/ui/password-input";
-import { RiArrowRightLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import { RiArrowRightLine } from "react-icons/ri";
 
 interface inputForm {
   password: string;
@@ -27,7 +26,7 @@ const ResetPassword = () => {
             textStyle="5xl"
             textAlign="left"
             w={{ base: "100%", md: "50%", xl: "30%" }}
-            color="green"
+            color="cyan"
             fontFamily="serif"
           >
             Poy Media
@@ -60,7 +59,7 @@ const ResetPassword = () => {
                 }
               />
               <Button
-                colorPalette="green"
+                colorPalette="cyan"
                 borderRadius="10px"
                 variant="outline"
                 my="4px"

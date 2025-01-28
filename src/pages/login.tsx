@@ -27,7 +27,7 @@ const Login = () => {
             textStyle="5xl"
             textAlign="left"
             w={{ base: "100%", md: "50%", xl: "30%" }}
-            color="green"
+            color="cyan"
             fontFamily="serif"
           >
             Poy Media
@@ -63,7 +63,7 @@ const Login = () => {
                 <Link to="/forgotpassword">Forgot Password?</Link>
               </Text>
               <Button
-                colorPalette="green"
+                colorPalette="cyan"
                 borderRadius="10px"
                 variant="outline"
                 my="4px"
@@ -75,7 +75,7 @@ const Login = () => {
               <div style={{ display: "flex" }}>
                 <Text textStyle="sm" textAlign="left" color="white">
                   Don't have an account yet?{" "}
-                  <Link to="/register" style={{ color: "green" }}>
+                  <Link to="/register" style={{ color: "cyan" }}>
                     Create account
                   </Link>
                 </Text>

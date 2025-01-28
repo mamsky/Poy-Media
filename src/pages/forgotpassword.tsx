@@ -24,7 +24,7 @@ const ForgotPassowrd = () => {
             textStyle="5xl"
             textAlign="left"
             w={{ base: "100%", md: "50%", xl: "30%" }}
-            color="green"
+            color="cyan"
             fontFamily="serif"
           >
             Poy Media
@@ -51,7 +51,7 @@ const ForgotPassowrd = () => {
                 }
               />
               <Button
-                colorPalette="green"
+                colorPalette="cyan"
                 borderRadius="10px"
                 variant="outline"
                 my="4px"
@@ -63,7 +63,7 @@ const ForgotPassowrd = () => {
               <div style={{ display: "flex" }}>
                 <Text textStyle="sm" textAlign="left" color="white">
                   Already have account?{" "}
-                  <Link to="/login" style={{ color: "green" }}>
+                  <Link to="/login" style={{ color: "cyan" }}>
                     Login
                   </Link>
                 </Text>
