@@ -1,7 +1,7 @@
 import ProfileLayout from "@/components/profile-layout";
+import { Grid, GridItem, Image } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import Layout from "../components/Layout";
-import { Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 
 const Media = () => {
   const location = useParams();
