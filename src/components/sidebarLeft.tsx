@@ -51,7 +51,7 @@ const SidebarLeft = ({ page }: props) => {
             textStyle={{ md: "xl", lg: "2xl" }}
             my="20px"
             display="flex"
-            color={!page ? "cyan" : ""}
+            color={!page ? { _dark: "cyan", _light: "gray" } : ""}
             alignItems="center"
             gap="4"
           >
@@ -61,7 +61,7 @@ const SidebarLeft = ({ page }: props) => {
         </Link>
         <Link to="/search">
           <Text
-            color={page == "search" ? "cyan" : ""}
+            color={page == "search" ? { _dark: "cyan", _light: "gray" } : ""}
             textStyle={{ md: "xl", lg: "2xl" }}
             my="20px"
             display="flex"
@@ -82,16 +82,19 @@ const SidebarLeft = ({ page }: props) => {
           <FaHeart />
           Follows
         </Text>
-        <Text
-          textStyle={{ md: "xl", lg: "2xl" }}
-          my="20px"
-          display="flex"
-          alignItems="center"
-          gap="4"
-        >
-          <RiAccountCircleLine />
-          Account
-        </Text>
+        <Link to="/profile">
+          <Text
+            color={page == "profile" ? { _dark: "cyan", _light: "gray" } : ""}
+            textStyle={{ md: "xl", lg: "2xl" }}
+            my="20px"
+            display="flex"
+            alignItems="center"
+            gap="4"
+          >
+            <RiAccountCircleLine />
+            Profile
+          </Text>
+        </Link>
       </Box>
 
       <DialogRoot>

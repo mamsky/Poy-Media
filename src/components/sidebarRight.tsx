@@ -3,43 +3,50 @@ import { Box, Button, HStack, Image, Stack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import BgCat from "../assets/bg-cat.png";
 
-const SidebaRight = () => {
+interface props {
+  hide?: string | undefined;
+}
+const SidebaRight = ({ hide }: props) => {
   return (
     <>
-      <Box
-        bg={{ _dark: "white/20", _light: "black/20" }}
-        p="2"
-        borderRadius="10px"
-      >
-        <Text>My Profile</Text>
-        <Box display="flex" justifyContent="space-between">
-          <Image
-            src={BgCat}
-            boxSize="50px"
-            borderRadius="full"
-            fit="cover"
-            alt="Naruto Uzumaki"
-          />
-          <Link
-            to="/"
-            style={{
-              border: "1px solid",
-              height: "50%",
-              padding: "4px",
-              borderRadius: "15px",
-            }}
-          >
-            Edit Profile
-          </Link>
+      {!hide ? (
+        <Box
+          bg={{ _dark: "white/20", _light: "black/20" }}
+          p="2"
+          borderRadius="10px"
+        >
+          <Text>My Profile</Text>
+          <Box display="flex" justifyContent="space-between">
+            <Image
+              src={BgCat}
+              boxSize="50px"
+              borderRadius="full"
+              fit="cover"
+              alt="Naruto Uzumaki"
+            />
+            <Link
+              to="/"
+              style={{
+                border: "1px solid",
+                height: "50%",
+                padding: "4px",
+                borderRadius: "15px",
+              }}
+            >
+              Edit Profile
+            </Link>
+          </Box>
+          <Text textStyle="xl">✨Paste Prosmana✨</Text>
+          <Text textStyle="xs">@pasteprosmana</Text>
+          <Text textStyle="xs">picked over by the worms, and weird fishes</Text>
+          <Box display="flex" gap="2">
+            <Text>291 Following</Text>
+            <Text>291 Follower</Text>
+          </Box>
         </Box>
-        <Text textStyle="xl">✨Paste Prosmana✨</Text>
-        <Text textStyle="xs">@pasteprosmana</Text>
-        <Text textStyle="xs">picked over by the worms, and weird fishes</Text>
-        <Box display="flex" gap="2">
-          <Text>291 Following</Text>
-          <Text>291 Follower</Text>
-        </Box>
-      </Box>
+      ) : (
+        ""
+      )}
 
       <Box
         bg={{ _dark: "white/20", _light: "black/20" }}

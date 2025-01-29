@@ -14,7 +14,12 @@ const ButtonRight = () => {
     <DrawerRoot>
       <DrawerBackdrop />
       <DrawerTrigger asChild>
-        <Button variant="outline" _light={{ bg: "black/20" }} size="sm">
+        <Button
+          variant="outline"
+          _light={{ bg: "black/20" }}
+          color={{ _light: "white", _dark: "black" }}
+          size="sm"
+        >
           R
         </Button>
       </DrawerTrigger>

@@ -9,12 +9,21 @@ import {
 import { Button, DrawerContext } from "@chakra-ui/react";
 import SidebarLeft from "./sidebarLeft";
 
-const ButtonLeft = () => {
+interface props {
+  page?: string | undefined;
+}
+
+const ButtonLeft = ({ page }: props) => {
   return (
     <DrawerRoot>
       <DrawerBackdrop />
       <DrawerTrigger asChild>
-        <Button variant="outline" _light={{ bg: "black/20" }} size="sm">
+        <Button
+          variant="outline"
+          _light={{ bg: "black/20" }}
+          color={{ _light: "white", _dark: "black" }}
+          size="sm"
+        >
           L
         </Button>
       </DrawerTrigger>
@@ -22,7 +31,7 @@ const ButtonLeft = () => {
         <DrawerContext>
           {() => (
             <DrawerBody>
-              <SidebarLeft />
+              <SidebarLeft page={page} />
             </DrawerBody>
           )}
         </DrawerContext>

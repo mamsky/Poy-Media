@@ -21,7 +21,7 @@ const Dashboard = () => {
     <>
       <Layout>
         <Text textStyle="2xl">Home</Text>
-        <Box display="flex" gap={2} p={2} border="1px solid">
+        <Box display="flex" gap={2} p={2} border="1px solid gray">
           <Box>
             <Avatar name="Paste Prosmana" src="" />
           </Box>
@@ -66,7 +66,7 @@ const Dashboard = () => {
             </DialogRoot>
           </Box>
         </Box>
-        <Box display="flex" gap={2} p={2} border="1px solid">
+        <Box display="flex" gap={2} p={2} border="1px solid gray">
           <Box>
             <Avatar name="Paste Prosmana" src="" />
           </Box>
@@ -95,7 +95,7 @@ const Dashboard = () => {
           </Box>
         </Box>
         {/* content 2 */}
-        <Box display="flex" gap={2} p={2} border="1px solid">
+        <Box display="flex" gap={2} p={2} border="1px solid gray">
           <Box>
             <Avatar name="Paste Prosmana" src="" />
           </Box>
@@ -123,7 +123,7 @@ const Dashboard = () => {
           </Box>
         </Box>
         {/* content 3 */}
-        <Box display="flex" gap={2} p={2} border="1px solid">
+        <Box display="flex" gap={2} p={2} border="1px solid gray">
           <Box>
             <Avatar name="Paste Prosmana" src="" />
           </Box>
